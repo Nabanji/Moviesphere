@@ -5,9 +5,14 @@
     outline: none;
 } 
 
-/* body {
-    background-color: #003990;
-} */
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
 .navbar {
     width: 100%;
@@ -32,6 +37,7 @@
     font-size: 14px;
     border: none;
     border-bottom: 1px solid lightgray;
+    /* border-radius: 12px; */
     border-right: none;
     background: transparent;
 }
@@ -49,5 +55,33 @@
 
 .movies-container {
     width: 100%;
-    border: 1px solid black;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cards li{
+    list-style-type: none;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    margin: 4px;
+    text-align: center;
+    height: fit-content;
+    cursor: pointer;
+    transition: .6s all ease;
+}
+
+.cards li:hover {
+    border: 1px solid lightslategray;
+}
+
+.cards li h4 {
+    font-size: 25px;
+}
+
+.cards li p {
+    font-size: 26px;
+    font-weight: bold;
 }

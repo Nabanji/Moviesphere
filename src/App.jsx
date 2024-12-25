@@ -61,12 +61,12 @@ function App() {
         </form>
       </nav>
 
-      <div className="movies-container" onSubmit={handleSearchChange}>
+      <div className="movies-container">
         {error && <p className="error">{error}</p>}
         {movies.length > 0 ? (
-          <ul>
+          <ul className='cards'>
             {movies.map((movie) => (
-              <li key={movie.imdbID}>
+              <li key={movie.imdbID} className='card'>
                 <h4>{movie.Title}</h4>
                 <p>{movie.Year}</p>
                 <img src={movie.Poster} alt={`${movie.Title} poster`} />
